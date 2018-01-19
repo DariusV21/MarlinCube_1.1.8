@@ -471,7 +471,7 @@
 // @section lcd
 
 // Include a page of printer information in the LCD Main Menu
-//#define LCD_INFO_MENU
+#define LCD_INFO_MENU
 
 // Scroll a longer status message into view
 //#define STATUS_MESSAGE_SCROLLING
@@ -573,7 +573,7 @@
   #endif
 
   // Add an 'M73' G-code to set the current percentage
-  //#define LCD_SET_PROGRESS_MANUALLY
+  #define LCD_SET_PROGRESS_MANUALLY
 
   // This allows hosts to request long names for files and folders with M33
   //#define LONG_FILENAME_HOST_SUPPORT
