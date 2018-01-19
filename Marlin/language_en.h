@@ -61,7 +61,7 @@
   #define MSG_DISABLE_STEPPERS                _UxGT("Motors off")
 #endif
 #ifndef MSG_DEBUG_MENU
-  #define MSG_DEBUG_MENU                      _UxGT("Debug")
+  #define MSG_DEBUG_MENU                      _UxGT("Debug Menu")
 #endif
 #ifndef MSG_PROGRESS_BAR_TEST
   #define MSG_PROGRESS_BAR_TEST               _UxGT("ProgBar Test")
@@ -79,16 +79,16 @@
   #define MSG_AUTO_HOME_Z                     _UxGT("Home Z")
 #endif
 #ifndef MSG_LEVEL_BED_HOMING
-  #define MSG_LEVEL_BED_HOMING                _UxGT("Home all")
+  #define MSG_LEVEL_BED_HOMING                _UxGT("Home XYZ")
 #endif
 #ifndef MSG_LEVEL_BED_WAITING
-  #define MSG_LEVEL_BED_WAITING               _UxGT("Begin?")
+  #define MSG_LEVEL_BED_WAITING               _UxGT("Click to Begin")
 #endif
 #ifndef MSG_LEVEL_BED_NEXT_POINT
-  #define MSG_LEVEL_BED_NEXT_POINT            _UxGT("Next")
+  #define MSG_LEVEL_BED_NEXT_POINT            _UxGT("Next Point")
 #endif
 #ifndef MSG_LEVEL_BED_DONE
-  #define MSG_LEVEL_BED_DONE                  _UxGT("Done")
+  #define MSG_LEVEL_BED_DONE                  _UxGT("Leveling Done")
 #endif
 #ifndef MSG_Z_FADE_HEIGHT
   #define MSG_Z_FADE_HEIGHT                   _UxGT("Fade Hght")
@@ -157,10 +157,10 @@
   #define MSG_MOVE_AXIS                       _UxGT("Move axis")
 #endif
 #ifndef MSG_BED_LEVELING
-  #define MSG_BED_LEVELING                    _UxGT("Level?")
+  #define MSG_BED_LEVELING                    _UxGT("Bed Leveling")
 #endif
 #ifndef MSG_LEVEL_BED
-  #define MSG_LEVEL_BED                       _UxGT("Level?")
+  #define MSG_LEVEL_BED                       _UxGT("Level bed")
 #endif
 #ifndef MSG_LEVEL_CORNERS
   #define MSG_LEVEL_CORNERS                   _UxGT("Level corners")
