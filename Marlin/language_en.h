@@ -185,13 +185,13 @@
   #define MSG_UBL_TOOLS                       _UxGT("UBL Tools")
 #endif
 #ifndef MSG_UBL_LEVEL_BED
-  #define MSG_UBL_LEVEL_BED                   _UxGT("Unified Bed Leveling")
+  #define MSG_UBL_LEVEL_BED                   _UxGT("UBL") // Unified Bed Leveling
 #endif
 #ifndef MSG_UBL_MANUAL_MESH
   #define MSG_UBL_MANUAL_MESH                 _UxGT("Manually Build Mesh")
 #endif
 #ifndef MSG_UBL_BC_INSERT
-  #define MSG_UBL_BC_INSERT                   _UxGT("Place shim & measure")
+  #define MSG_UBL_BC_INSERT                   _UxGT("Shim & msre") // Place shim & measure
 #endif
 #ifndef MSG_UBL_BC_INSERT2
   #define MSG_UBL_BC_INSERT2                  _UxGT("Measure")
@@ -203,10 +203,10 @@
   #define MSG_UBL_MOVING_TO_NEXT              _UxGT("Moving to next")
 #endif
 #ifndef MSG_UBL_ACTIVATE_MESH
-  #define MSG_UBL_ACTIVATE_MESH               _UxGT("Activate UBL")
+  #define MSG_UBL_ACTIVATE_MESH               _UxGT("Enbl UBL") // Enable UBL
 #endif
 #ifndef MSG_UBL_DEACTIVATE_MESH
-  #define MSG_UBL_DEACTIVATE_MESH             _UxGT("Deactivate UBL")
+  #define MSG_UBL_DEACTIVATE_MESH             _UxGT("Dsbl UBL") // Disable UBL
 #endif
 #ifndef MSG_UBL_SET_BED_TEMP
   #define MSG_UBL_SET_BED_TEMP                _UxGT("Bed Temp")
