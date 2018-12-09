@@ -686,9 +686,9 @@
  *      O-- FRONT --+
  *    (0,0)
  */
-#define X_PROBE_OFFSET_FROM_EXTRUDER 15  // X offset: -left  +right  [of the nozzle]
-#define Y_PROBE_OFFSET_FROM_EXTRUDER -38  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0 // Z offset: -below +above  [the nozzle]
+#define X_PROBE_OFFSET_FROM_EXTRUDER 33.5  // X offset: -left  +right  [of the nozzle]
+#define Y_PROBE_OFFSET_FROM_EXTRUDER 10  // Y offset: -front +behind [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.2 // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -771,7 +771,7 @@
 
 #define NO_MOTION_BEFORE_HOMING  // Inhibit movement until all axes have been homed
 
-#define Z_HOMING_HEIGHT 4  // (in mm) Minimal z height before homing (G28) for Z clearance above the bed, clamps, ...
+#define Z_HOMING_HEIGHT 5  // (in mm) Minimal z height before homing (G28) for Z clearance above the bed, clamps, ...
                              // Be sure you have this distance over your Z_MAX_POS in case.
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
@@ -783,16 +783,16 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 200
-#define Y_BED_SIZE 170
+#define X_BED_SIZE 210
+#define Y_BED_SIZE 190
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 10
-#define Y_MIN_POS 10
+#define X_MIN_POS 0
+#define Y_MIN_POS 0
 #define Z_MIN_POS 0
 #define X_MAX_POS 210
-#define Y_MAX_POS 180
-#define Z_MAX_POS 150
+#define Y_MAX_POS 190
+#define Z_MAX_POS 142
 
 /**
  * Software Endstops
@@ -904,8 +904,8 @@
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE     0.4   // (mm) Diameter of primary nozzle.
     #define MESH_TEST_LAYER_HEIGHT    0.2   // (mm) Default layer height for the G26 Mesh Validation Tool.
-    #define MESH_TEST_HOTEND_TEMP   205.0   // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
-    #define MESH_TEST_BED_TEMP       60.0   // (°C) Default bed temperature for the G26 Mesh Validation Tool.
+    #define MESH_TEST_HOTEND_TEMP   250.0   // (°C) Default nozzle temperature for the G26 Mesh Validation Tool.
+    #define MESH_TEST_BED_TEMP       110.0   // (°C) Default bed temperature for the G26 Mesh Validation Tool.
   #endif
 
 #endif
@@ -914,13 +914,13 @@
 
   // Set the number of grid points per dimension.
   #define GRID_MAX_POINTS_X 3
-  #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
+  #define GRID_MAX_POINTS_Y 4
 
   // Set the boundaries for probing (where the probe can reach).
-  #define LEFT_PROBE_BED_POSITION 40
+  #define LEFT_PROBE_BED_POSITION 35
   #define RIGHT_PROBE_BED_POSITION 190
-  #define FRONT_PROBE_BED_POSITION 40
-  #define BACK_PROBE_BED_POSITION 120
+  #define FRONT_PROBE_BED_POSITION 10
+  #define BACK_PROBE_BED_POSITION 180
 
   // The Z probe minimum outer margin (to validate G29 parameters).
   #define MIN_PROBE_EDGE 10
@@ -950,12 +950,12 @@
 
   // 3 arbitrary points to probe.
   // A simple cross-product is used to estimate the plane of the bed.
-  #define ABL_PROBE_PT_1_X 15   // Was 20
-  #define ABL_PROBE_PT_1_Y 180   // Was 50
-  #define ABL_PROBE_PT_2_X 15   // Was 175
-  #define ABL_PROBE_PT_2_Y 20   // Was 50
-  #define ABL_PROBE_PT_3_X 170   // Was 175
-  #define ABL_PROBE_PT_3_Y 20   // Was 170
+  #define ABL_PROBE_PT_1_X 40   // Was 20
+  #define ABL_PROBE_PT_1_Y 10   // Was 50
+  #define ABL_PROBE_PT_2_X 110   // Was 175
+  #define ABL_PROBE_PT_2_Y 50   // Was 50
+  #define ABL_PROBE_PT_3_X 190   // Was 175
+  #define ABL_PROBE_PT_3_Y 135   // Was 170
 
 #elif ENABLED(AUTO_BED_LEVELING_UBL)
 
@@ -1017,7 +1017,7 @@
 // @section homing
 
 // The center of the bed is at (X=0, Y=0)
-#define BED_CENTER_AT_90_90
+#define BED_CENTER_AT_105_80
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
@@ -1117,7 +1117,7 @@
 // M502 - reverts to the default "factory settings".  You still need to store them in EEPROM afterwards if you want to.
 //
 #define EEPROM_SETTINGS // Enable for M500 and M501 commands
-//#define DISABLE_M503    // Saves ~2700 bytes of PROGMEM. Disable for release!
+#define DISABLE_M503    // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT   // Give feedback on EEPROM commands. Disable to save PROGMEM.
 
 //
@@ -1214,7 +1214,7 @@
  * Attention: EXPERIMENTAL. G-code arguments may change.
  *
  */
-//#define NOZZLE_CLEAN_FEATURE
+#define NOZZLE_CLEAN_FEATURE
 
 #if ENABLED(NOZZLE_CLEAN_FEATURE)
   // Default number of pattern repetitions
